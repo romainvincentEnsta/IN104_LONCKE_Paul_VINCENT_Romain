@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "sudoku_safe.h"
+#include "safe.h"
 
 int remplir_case(int valeur, int* mémoire){
     valeur=rand()(%9);
