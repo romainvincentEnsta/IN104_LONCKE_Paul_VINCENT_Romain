@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define r 9
-#define c 9
-
-int** creation_grille() {
-    int sudoku[r][c];
+int** creation_grille(int longueur, int largeur) {
+    int sudoku[longueur][largeur];
 
     int* cell_1[9] = {0,0,0,0,0,0,0,0,0};
     int* cell_2[9] = {0,0,0,0,0,0,0,0,0};
@@ -44,8 +41,4 @@ int** creation_grille() {
         }
     }
     return sudoku;
-}
-
-int main() {
-    return 0;
 }
