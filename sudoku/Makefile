@@ -8,13 +8,13 @@ main.x : main.o solve.o safe.o sudoku.o afficher_sudoku.o
 main.o : main.c 
 	$(CC) $(CFLAGS) -o $@ -c $^
 solve.o : safe.c solve.c
-	$(CC) $(CFLAGS) -o $@ -c $^
+	$(CC) $(CFLAGS) -o $@  $^
 safe.o : safe.c
-	$(CC) $(CFLAGS) -o $@ -c $^
+	$(CC) $(CFLAGS) -o $@  $^
 sudoku.o : sudoku.c
-	$(CC) $(CFLAGS) -o $@ -c $^
+	$(CC) $(CFLAGS) -o $@  $^
 afficher_sudoku.o : afficher_sudoku.c
-	$(CC) $(CFLAGS) -o $@ -c $^
+	$(CC) $(CFLAGS) -o $@ $^
 clean : 
 	rm -f *~ *.o
 realclean : 
