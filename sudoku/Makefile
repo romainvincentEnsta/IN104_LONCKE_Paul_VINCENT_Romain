@@ -4,7 +4,7 @@ CFLAGS= -Wall -Werror
 all: main.x
 
 %.x : %.o 
-	$(CC) $(CFLAGS) -o $@ -$<
+	$(CC) $(CFLAGS) -o $@ $<
 
 %.o : %.c 
 	$(CC) $(CFLAGS) -o $@ -c $<
