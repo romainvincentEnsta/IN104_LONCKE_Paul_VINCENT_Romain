@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include "safe.h"
 #include "solve.h"
-#include "afficher_sudoku.h"
 
 int remplir_case(int valeur, int* mémoire){
     valeur=rand()%(9);
@@ -60,3 +59,6 @@ bool sudoku_solve(int** grille){
 }
 
 
+int main {
+    return 0;
+}
