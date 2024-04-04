@@ -33,6 +33,6 @@ bool safe(int** grille, int ligne, int colonne, int valeur){
     }
 }
 
-int main {
+int main() {
     return 0;
 }

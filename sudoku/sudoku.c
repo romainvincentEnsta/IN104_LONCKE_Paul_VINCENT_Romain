@@ -44,6 +44,6 @@ int** creation_grille(int longueur, int largeur) {
     return sudoku;
 }
 
-int main {
+int main() {
     return 0;
 }

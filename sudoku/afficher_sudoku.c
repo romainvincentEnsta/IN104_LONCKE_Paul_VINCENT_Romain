@@ -11,6 +11,6 @@ void afficher_sudoku(int** sudoku) {
     printf("\n");
 }
 
-int main {
+int main() {
     return 0;
 }
