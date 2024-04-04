@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include "safe.h"
+#include "afficher_sudoku.h"
 
 bool safe(int** grille, int ligne, int colonne, int valeur){
     for (int l=0 ; l<8 ; l++){//On parcourt la ligne de la case (ligne,colonne)
