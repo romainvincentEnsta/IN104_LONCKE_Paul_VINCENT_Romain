@@ -5,7 +5,7 @@
 #include "solve.h"
 
 int remplir_case(int valeur, int* mémoire){
-    valeur=rand()%(9);
+    valeur=rand()%(9)+1;
     for (int j =0 ; j<=8 ; j++){
         if (mémoire[j]==0){
             if (mémoire[valeur-1]==1){
@@ -47,6 +47,7 @@ bool sudoku_solve(int** grille){
                 if (valeur!=0){
                     grille[ligne][colonne]=valeur;
                     sudoku_solve(grille);
+                    return false;
                 }
                 else {
                     return false;
