@@ -50,6 +50,7 @@ bool sudoku_solve(int** grille){
                 else {
                     return false;
                 }
+                return true;
             }
         else {
             return true;
