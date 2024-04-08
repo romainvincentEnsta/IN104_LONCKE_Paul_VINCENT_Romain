@@ -10,6 +10,7 @@ int remplir_case(int valeur, int* mémoire){
         if (mémoire[j]==0){
             if (mémoire[valeur-1]==1){
                 remplir_case(valeur,mémoire);
+                return 0;
             }
             else{
                 return valeur;
