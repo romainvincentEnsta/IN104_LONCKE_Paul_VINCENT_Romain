@@ -5,7 +5,13 @@
 #define r 9
 #define c 9
 
-int(*)[c] creation_grille() {
+
+int** creation_grille() {
+    int** sudoku = malloc(sizeof(int*)*r);
+    for (int i = 0;i<9;++i) {
+        sudoku[i] = malloc(sizeof(int*)*r);
+    }
+
     int sudoku[r][c];
     int cell_1[9] = {0,0,0,0,0,0,0,0,0};
     int cell_2[9] = {0,0,0,0,0,0,0,0,0};
