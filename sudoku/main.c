@@ -4,6 +4,7 @@
 #include "solve.h"
 #include "sudoku.h"
 #include <stdbool.h>
+#include <stdlib.h>
 
 #define r 9
 #define c 9
