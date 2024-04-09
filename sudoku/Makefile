@@ -4,7 +4,7 @@ LFLAGS = -I ~/Git_Hub/IN104_Projet/sudoku/includes
 
 all: main.x
 
-main.x : solve.o safe.o sudoku.o afficher_sudoku.o
+main.x : solve.o safe.o sudoku.o afficher_sudoku.o remplir_case.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 %.o : %.c 
