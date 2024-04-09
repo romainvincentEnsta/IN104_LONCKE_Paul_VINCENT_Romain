@@ -4,7 +4,6 @@
 
 int** creation_grille(int longueur, int largeur) {
     int sudoku[longueur][largeur];
-
     int* cell_1[9] = {0,0,0,0,0,0,0,0,0};
     int* cell_2[9] = {0,0,0,0,0,0,0,0,0};
     int* cell_3[9] = {0,0,0,0,0,0,0,0,0};
