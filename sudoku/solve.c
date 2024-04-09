@@ -20,6 +20,7 @@ int remplir_case(int valeur, int* mémoire){
             return 0;
         }
     }
+    return valeur;
 }
 
 
@@ -59,6 +60,7 @@ bool sudoku_solve(int** grille){
             }
         }
     }
+    return true;
 }
 
 
