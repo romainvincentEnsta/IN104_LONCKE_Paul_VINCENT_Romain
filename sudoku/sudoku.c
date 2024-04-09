@@ -7,9 +7,9 @@
 
 int** creation_grille(int longueur, int largeur) {
     int sudoku[longueur][largeur];
-    int* cell_1[9] = {0,0,0,0,0,0,0,0,0};
-    int* cell_2[9] = {0,0,0,0,0,0,0,0,0};
-    int* cell_3[9] = {0,0,0,0,0,0,0,0,0};
+    int cell_1[9] = {0,0,0,0,0,0,0,0,0};
+    int cell_2[9] = {0,0,0,0,0,0,0,0,0};
+    int cell_3[9] = {0,0,0,0,0,0,0,0,0};
     
     for (int i = 0;i<3;++i) {
         for (int j = 0;j<3;++j) {
