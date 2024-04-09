@@ -20,6 +20,7 @@ int remplir_case(int valeur, int* mémoire){
             return 0;
         }
     }
+    return valeur;
 }
 
 
@@ -31,8 +32,8 @@ bool sudoku_solve(int** grille){
         for(int b=0 ; b<=9 ; b++){
             if (grille[a][b]==0){
                     while (grille[ligne][colonne]!=0){
-                    ligne=rand()%(9);
-                    colonne=rand()%(9);
+                        ligne=rand()%(9);
+                        colonne=rand()%(9);
                 }
                 int mémoire[9];
                 for (int i=0;  i<=8 ; i++){
@@ -59,6 +60,7 @@ bool sudoku_solve(int** grille){
             }
         }
     }
+    return true;
 }
 
 
