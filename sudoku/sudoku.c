@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "sudoku.h"
 
 int** creation_grille(int longueur, int largeur) {
     int sudoku[longueur][largeur];
@@ -41,4 +42,8 @@ int** creation_grille(int longueur, int largeur) {
         }
     }
     return sudoku;
+}
+
+int main() {
+    return 0;
 }

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "afficher_sudoku.h"
 
 void afficher_sudoku(int** sudoku) {
     for (int i = 0;i<9;++i) {
@@ -8,4 +9,8 @@ void afficher_sudoku(int** sudoku) {
         printf("\n");
     }
     printf("\n");
+}
+
+int main() {
+    return 0;
 }
