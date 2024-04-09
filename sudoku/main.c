@@ -18,6 +18,10 @@ int main(){
     else {
         afficher_sudoku(grille);
     }
+    for (int i = 0;i<9;++i) {
+        free(grille[i]);
+    }
+    free(grille);
     return 0;
 }
 
