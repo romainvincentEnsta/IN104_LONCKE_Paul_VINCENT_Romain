@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include "sudoku.h"
 
+#define r 9
+#define c 9
+
 int** creation_grille(int longueur, int largeur) {
     int sudoku[longueur][largeur];
 
