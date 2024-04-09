@@ -12,7 +12,6 @@ int** creation_grille() {
         sudoku[i] = malloc(sizeof(int*)*r);
     }
 
-    int sudoku[r][c];
     int cell_1[9] = {0,0,0,0,0,0,0,0,0};
     int cell_2[9] = {0,0,0,0,0,0,0,0,0};
     int cell_3[9] = {0,0,0,0,0,0,0,0,0};
