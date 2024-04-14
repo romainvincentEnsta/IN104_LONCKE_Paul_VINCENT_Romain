@@ -45,6 +45,6 @@ bool sudoku_solve(int** grille){
 }
 
 
-/*int main() {
+int main() {
     return 0;
-}*/
+}
