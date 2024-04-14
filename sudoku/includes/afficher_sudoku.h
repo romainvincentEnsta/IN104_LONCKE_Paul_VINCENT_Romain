@@ -1,5 +1,5 @@
-#ifndef AFFICHER_SUDOKU.H
-#define AFFICHER_SUDOKU.H
+#ifndef AFFICHER_SUDOKU_H
+#define AFFICHER_SUDOKU_H
 
 #include <stdio.h>
 

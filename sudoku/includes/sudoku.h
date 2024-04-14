@@ -1,5 +1,5 @@
-#ifndef SUDOKU.H
-#define SUDOKU.H
+#ifndef SUDOKU_H
+#define SUDOKU_H
 
 #include <stdio.h>
 

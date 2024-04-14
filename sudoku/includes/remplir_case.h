@@ -1,5 +1,5 @@
-#ifndef REMPLIR_CASE.H
-#define REMPLIR_CASE.H
+#ifndef REMPLIR_CASE_H
+#define REMPLIR_CASE_H
 
 #include <stdio.h>
 

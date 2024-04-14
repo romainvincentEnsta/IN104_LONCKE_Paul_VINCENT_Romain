@@ -1,5 +1,5 @@
-#ifndef SAFE.H
-#define SAFE.H
+#ifndef SAFE_H
+#define SAFE_H
 
 #include <stdio.h>
 #include <stdbool.h>
