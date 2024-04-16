@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "a_gagné.h"
+#include "afficher_grille.h"
+#include "creation_grille.h"
+#include "est_plein.h"
+#include "placer.h"
 
 int main(){
     int gagné=0;
