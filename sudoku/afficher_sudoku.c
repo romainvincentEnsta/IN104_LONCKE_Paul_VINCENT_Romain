@@ -2,7 +2,7 @@
 #include "afficher_sudoku.h"
 
 void afficher_sudoku(int** sudoku) {
-    for (int a==0 ; a<9 ; a++){
+    for (int a=0 ; a<9 ; a++){
         printf("_");
     }
     printf("\n");
@@ -20,7 +20,7 @@ void afficher_sudoku(int** sudoku) {
         }
         printf("\n");
     }
-    for (int a==0 ; a<9 ; a++){
+    for (int a=0 ; a<9 ; a++){
         printf("_");
     }
     printf("\n");
