@@ -44,7 +44,3 @@ bool sudoku_solve(int** grille){
     return true;
 }
 
-
-int main() {
-    return 0;
-}

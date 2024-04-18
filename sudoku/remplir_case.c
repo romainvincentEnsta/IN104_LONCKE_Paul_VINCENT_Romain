@@ -20,6 +20,3 @@ int remplir_case(int valeur, int* mémoire){
     return valeur;
 }
 
-int main(){
-    return 0;
-}
