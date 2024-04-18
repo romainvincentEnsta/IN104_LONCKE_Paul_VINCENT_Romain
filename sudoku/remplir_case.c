@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "remplir_case.h"
 #include "tableau_plein.h"
 
