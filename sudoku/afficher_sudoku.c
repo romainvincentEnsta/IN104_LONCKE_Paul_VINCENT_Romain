@@ -13,7 +13,7 @@ void afficher_sudoku(int** sudoku) {
             }
             printf("%d",sudoku[i][j]);
             if ((i/3==2) && (j==8)){
-                for (int b==0 ; b<8 ; b++){
+                for (int b=0 ; b<8 ; b++){
                     printf("_");
                 }
             }
