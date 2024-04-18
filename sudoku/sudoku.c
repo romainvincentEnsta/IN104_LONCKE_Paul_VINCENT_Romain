@@ -50,7 +50,3 @@ int** creation_grille() {
     }
     return sudoku;
 }
-
-int main() {
-    return 0;
-}
