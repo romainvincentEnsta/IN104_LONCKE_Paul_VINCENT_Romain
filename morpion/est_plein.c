@@ -9,7 +9,3 @@ int est_plein(int* grille){
     }
     return 1;
 }
-
-int main(){
-    return 0;
-}
