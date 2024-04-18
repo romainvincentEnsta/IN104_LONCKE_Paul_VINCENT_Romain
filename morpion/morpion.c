@@ -22,8 +22,10 @@ int main(){
         while (!triche_1){
             printf("Wohhh tu crois tricher comme ça\n");
             printf("Quelle est le numéro de la case dans laquelle le joueur n°1 veux jouer ?\n");
-            scanf("%d",&case_1);
-            triche_1=placer(grille,case_1-1,1);
+            int num;
+            scanf("%d",&num);
+            //printf("ke vais demander de scanner");
+            triche_1=placer(grille,num-1,1);
         }
         gagné = a_gagne(grille,1) || a_gagne(grille,2) || est_plein(grille);
         if (gagné){

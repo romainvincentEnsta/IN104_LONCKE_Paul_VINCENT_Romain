@@ -54,7 +54,3 @@ void afficher_grille(int* grille){
         }
     }
 }
-
-int main(){
-    return 0;
-}

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "creation_grille.h"
 
 int* creation_grille(){
@@ -7,8 +8,4 @@ int* creation_grille(){
         grille[i]=-1;
     }
     return grille;
-}
-
-int main(){
-    return 0;
 }

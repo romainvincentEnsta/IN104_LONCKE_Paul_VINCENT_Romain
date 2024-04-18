@@ -1,4 +1,4 @@
-#include <stido.h>
+#include <stdio.h>
 #include "a_gagné.h"
 
 int a_gagne(int* grille, int joueur){
@@ -41,8 +41,4 @@ int a_gagne(int* grille, int joueur){
     }
     gagne = gagne || test;
     return gagne;
-}
-
-int main(){
-    return 0;
 }
