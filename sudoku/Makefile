@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS = -Wall -Werror
 LFLAGS = -I ~/Git_Hub/IN104_Projet/sudoku/includes
 
-all: main.x
+all: main.x clean
 
 main.x : solve.o safe.o sudoku.o afficher_sudoku.o remplir_case.o grille_pleine.o main.o tableau_plein.o
 	$(CC) $(CFLAGS) -o $@ $^
