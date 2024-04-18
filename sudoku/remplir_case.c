@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "remplir_case.h"
+#include "tableau_plein.h"
 
 int remplir_case(int valeur, int* mémoire){
     valeur=rand()%(9)+1;

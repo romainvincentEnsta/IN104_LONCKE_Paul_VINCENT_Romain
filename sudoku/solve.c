@@ -38,5 +38,4 @@ bool sudoku_solve(int** grille){
     else {
         return true;
     }
-    
 }
