@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS = -Wall -Werror
-LFLAGS = -I ~/in104/sudoku/includes
+LFLAGS = -I ~/IN104_Projet/sudoku/includes
 
 all: main.x clean
 
