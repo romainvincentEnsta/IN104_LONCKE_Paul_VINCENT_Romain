@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "sudoku.h"
+#include <time.h>
 
 #define r 9
 #define c 9
 
 
 int** creation_grille() {
-    int** sudoku = malloc(sizeof(int*)*r);
+    srand(time(0));
+    int** sudoku;
+    sudoku = (int**)malloc(sizeof(int*)*9);
     for (int i = 0;i<9;++i) {
-        sudoku[i] = malloc(sizeof(int*)*r);
+        sudoku[i] = malloc(sizeof(int)*9);
     }
 
     int cell_1[9] = {0,0,0,0,0,0,0,0,0};

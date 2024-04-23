@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "grille_pleine.h"
 #include "safe.h"
 #include "solve.h"
 #include "remplir_case.h"
+#include "grille_pleine.h"
+#include <time.h>
 
 bool sudoku_solve(int** grille){
+    srand(time(0));
     int ligne = 0;
     int colonne = 0;
     int valeur=0;
@@ -27,8 +29,7 @@ bool sudoku_solve(int** grille){
         valeur = remplir_case(valeur, mémoire);
         if (valeur!=0){
             grille[ligne][colonne]=valeur;
-            sudoku_solve(grille);
-            return true;
+            return sudoku_solve(grille);
         }
         else {
             return false;

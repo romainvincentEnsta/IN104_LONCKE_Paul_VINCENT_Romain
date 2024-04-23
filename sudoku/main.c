@@ -13,13 +13,17 @@ int main(){
     int** grille = creation_grille(r,c);
     afficher_sudoku(grille);
     bool vérification=sudoku_solve(grille);
-    if (!vérification){
+    while (!vérification){
         printf("Erreur");
+        for (int i = 0;i<9;i++) {
+            free(grille[i]);
+        }
+        free(grille);
+        int** grille=creation_grille(r,c);
+        vérification=sudoku_solve(grille);
     }
-    else {
-        afficher_sudoku(grille);
-    }
-    for (int i = 0;i<9;++i) {
+    afficher_sudoku(grille);
+    for (int i = 0;i<9;i++) {
         free(grille[i]);
     }
     free(grille);
