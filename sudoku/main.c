@@ -10,10 +10,10 @@
 #define c 9
 
 int main(){
-    int** grille = creation_grille(r,c);
+    int** grille = creation_grille();
     afficher_sudoku(grille);
     bool vérification=sudoku_solve(grille);
-    while (!vérification){
+/*    while (!vérification){
         printf("Erreur");
         for (int i = 0;i<9;i++) {
             free(grille[i]);
@@ -22,7 +22,13 @@ int main(){
         int** grille=creation_grille(r,c);
         vérification=sudoku_solve(grille);
     }
+*/
+    if (!vérification){
+        printf("Erreur\n");
+    }
+    else {
     afficher_sudoku(grille);
+    }
     for (int i = 0;i<9;i++) {
         free(grille[i]);
     }

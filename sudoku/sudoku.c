@@ -10,9 +10,9 @@
 int** creation_grille() {
     srand(time(0));
     int** sudoku;
-    sudoku = (int**)malloc(sizeof(int*)*9);
+    sudoku = (int**)malloc(sizeof(int*)*r);
     for (int i = 0;i<9;++i) {
-        sudoku[i] = malloc(sizeof(int)*9);
+        sudoku[i] = malloc(sizeof(int)*c);
     }
 
     int cell_1[9] = {0,0,0,0,0,0,0,0,0};
