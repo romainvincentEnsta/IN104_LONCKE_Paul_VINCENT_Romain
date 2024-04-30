@@ -17,7 +17,11 @@ bool sudoku_solve(int** grille){
                 ligne=rand()%(9);
                 colonne=rand()%(9);
         }
-        int mémoire[9];
+        int* mémoire;
+        mémoire=malloc(9*sizeof(int));
+        for(int j=0 ; j<9 ; j++){
+            mémoire[j]=0;
+        }
         for (int i=0;  i<=8 ; i++){
             if (safe(grille, ligne,colonne,i+1)){
                 mémoire[i]=0;
@@ -29,9 +33,11 @@ bool sudoku_solve(int** grille){
         valeur = remplir_case(valeur, mémoire);
         if (valeur!=0){
             grille[ligne][colonne]=valeur;
+            free(mémoire);
             return sudoku_solve(grille);
         }
         else {
+            free(mémoire);
             return false;
         }
         return true;

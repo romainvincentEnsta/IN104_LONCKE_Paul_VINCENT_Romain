@@ -12,7 +12,7 @@
 int main(){
     int** grille = creation_grille();
     afficher_sudoku(grille);
-    bool vérification=sudoku_solve(grille);
+    sudoku_solve(grille);
 /*    while (!vérification){
         printf("Erreur");
         for (int i = 0;i<9;i++) {
@@ -23,12 +23,13 @@ int main(){
         vérification=sudoku_solve(grille);
     }
 */
-    if (!vérification){
+/*  if (!vérification){
         printf("Erreur\n");
     }
     else {
     afficher_sudoku(grille);
     }
+*/
     for (int i = 0;i<9;i++) {
         free(grille[i]);
     }
