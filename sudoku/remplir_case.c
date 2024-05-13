@@ -5,11 +5,11 @@
 #include "tableau_plein.h"
 
 int remplir_case(int valeur, int* mémoire){
-    srand(time(0));
-    valeur=rand()%(9)+1;
-    if (tableau_plein(mémoire)){
-        if (mémoire[valeur-1]==1){
-            return remplir_case(valeur,mémoire);
+    srand(time(0));  //On veut des nombres aléatoires différents
+    valeur=rand()%(9)+1;  //On initialise valeur
+    if (tableau_plein(mémoire)){     //Si mémoire n'est pas déjà plein
+        if (mémoire[valeur-1]==1){   
+            return remplir_case(valeur,mémoire);  //Si la valeur de "valeur" a déjà été tiré on recommence
         }
         else{
             return valeur;

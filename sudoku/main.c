@@ -10,9 +10,9 @@
 #define c 9
 
 int main(){
-    int** grille = creation_grille();
-    afficher_sudoku(grille);
-    sudoku_solve(grille);
+    int** grille = creation_grille();  //On initialise une grille vide
+    afficher_sudoku(grille);           //On l'affiche
+    sudoku_solve(grille);              //On la remplit
 /*    while (!vérification){
         printf("Erreur");
         for (int i = 0;i<9;i++) {
@@ -30,7 +30,7 @@ int main(){
     afficher_sudoku(grille);
     }
 */
-    for (int i = 0;i<9;i++) {
+    for (int i = 0;i<9;i++) {      //On vide la mémoire
         free(grille[i]);
     }
     free(grille);
