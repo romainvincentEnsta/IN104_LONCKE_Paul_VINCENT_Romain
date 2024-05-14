@@ -8,10 +8,7 @@
 
 
 int** creation_grille() {
-<<<<<<< HEAD
-=======
     srand(time(0));   //On souhaite des nombres aléatoires différents à chaque utilisation
->>>>>>> a625a7a3da9adc9b270970c4dc5716b93cd3c8e1
     int** sudoku;
     sudoku = (int**)malloc(sizeof(int*)*r);   //On initialise la grille de sudoku
     for (int i = 0;i<9;++i) {
