@@ -5,7 +5,6 @@
 #include "solve.h"
 #include "remplir_case.h"
 #include "grille_pleine.h"
-#include "tableau_nul.h"
 
 bool sudoku_solve(int** grille){
     srand(time(0));  //On l'utilise pour avoir un nombre aléatoire différent à chaque partie
