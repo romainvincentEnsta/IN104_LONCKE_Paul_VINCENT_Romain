@@ -5,14 +5,14 @@
 #include "solve.h"
 #include "remplir_case.h"
 #include "grille_pleine.h"
-#include <time.h>
+#include "tableau_nul.h"
 
 bool sudoku_solve(int** grille){
-    srand(time(0));
     int ligne = 0;
     int colonne = 0;
     int valeur=0;
-    if (grille_pleine(grille)){
+    if (!grille_pleine(grille)){
+        printf("grille non pleine\n");
             while (grille[ligne][colonne]!=0){
                 ligne=rand()%(9);
                 colonne=rand()%(9);
@@ -24,23 +24,27 @@ bool sudoku_solve(int** grille){
         }
         for (int i=0;  i<=8 ; i++){
             if (safe(grille, ligne,colonne,i+1)){
-                mémoire[i]=0;
+                mémoire[i]=1;
+                printf("case safe\n");
             }
             else{
-                mémoire[i]=1;   
+                mémoire[i]=0;   
             }
         }
-        valeur = remplir_case(valeur, mémoire);
-        if (valeur!=0){
+        if(!tableau_nul(mémoire)){
+            printf("tableau non nul\n");
+            valeur=rand()%(9)+1;
+            while(!remplir_case(valeur,mémoire)){
+                valeur=rand()%(9)+1;
+            }
             grille[ligne][colonne]=valeur;
             free(mémoire);
             return sudoku_solve(grille);
         }
         else {
-            free(mémoire);
-            return false;
+        free(mémoire);
+        return false;
         }
-        return true;
     }
     else {
         return true;

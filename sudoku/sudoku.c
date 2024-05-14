@@ -8,7 +8,6 @@
 
 
 int** creation_grille() {
-    srand(time(0));
     int** sudoku;
     sudoku = (int**)malloc(sizeof(int*)*r);
     for (int i = 0;i<9;++i) {
