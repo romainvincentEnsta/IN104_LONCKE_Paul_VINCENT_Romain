@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "safe.h"
 #include "solve.h"
 #include "remplir_case.h"
 #include "grille_pleine.h"
+#include "safe.h"
 
 bool sudoku_solve(int** grille){
     srand(time(0));  //On l'utilise pour avoir un nombre aléatoire différent à chaque partie
