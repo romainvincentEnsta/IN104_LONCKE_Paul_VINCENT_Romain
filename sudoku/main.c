@@ -11,6 +11,7 @@
 #define c 9
 
 int main(){
+<<<<<<< HEAD
     srand(time(0));
     int gagné=true;
     int** grille = creation_grille();
@@ -33,6 +34,11 @@ int main(){
     else {
         printf("C'est non\n");
     }
+=======
+    int** grille = creation_grille();  //On initialise une grille vide
+    afficher_sudoku(grille);           //On l'affiche
+    sudoku_solve(grille);              //On la remplit
+>>>>>>> a625a7a3da9adc9b270970c4dc5716b93cd3c8e1
 /*    while (!vérification){
         printf("Erreur");
         for (int i = 0;i<9;i++) {
@@ -50,7 +56,7 @@ int main(){
     afficher_sudoku(grille);
     }
 */
-    for (int i = 0;i<9;i++) {
+    for (int i = 0;i<9;i++) {      //On vide la mémoire
         free(grille[i]);
     }
     free(grille);
