@@ -53,14 +53,13 @@ int main(){
                 }
             }
         }
-    }
-
-    if (grille_pleine(grille)) {
-        printf("Bravo !\n");
-        for (int i = 0;i<9;i++) {      //On vide la mémoire
-            free(grille[i]);
+        if (grille_pleine(grille)) {
+            printf("Bravo !\n");
+            for (int i = 0;i<9;i++) {      //On vide la mémoire
+                free(grille[i]);
+            }
+        free(grille);
         }
-    free(grille);
     }
 
     return 0;
