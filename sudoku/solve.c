@@ -32,7 +32,7 @@ bool sudoku_solve(int** grille){
         }
         valeur = remplir_case(valeur, mémoire);   //On assigne une valeur disponible dans le tableau mémoire
         if (valeur!=0){
-            grille[ligne][colonne]=valeur;  //On néttoie la mémoire
+            grille[ligne][colonne]=valeur;  //On néttoie
             free(mémoire);
             return sudoku_solve(grille);
         }
