@@ -26,17 +26,17 @@ int main(){
 
     int a, b, num;
     while (1) {
-        printf("Enter the row and column to update: ");
+        printf("Entrer la ligne et la colonne souhaitée : ");
         scanf("%d %d", &a, &b);
         a--;
         b--;
 
-        printf("Enter the new number: ");
+        printf("Entrer un nombre : ");
         scanf("%d", &num);
 
         if (num == 0) {
             if (grille[a][b] == 0)
-                printf("This cell is already empty.\n");
+                printf("Cette cellule est déjà vide.\n");
             else {
                 grille[a][b] = 0;
                 afficher_sudoku(grille);
@@ -49,7 +49,7 @@ int main(){
                     grille[a][b] = num;
                     afficher_sudoku(grille);
                 } else {
-                    printf("This number cannot be placed here.\n");
+                    printf("Ce nombre ne peut pas être placé ici.\n");
                 }
             }
         }
@@ -59,6 +59,7 @@ int main(){
                 free(grille[i]);
             }
         free(grille);
+        break;
         }
     }
 
