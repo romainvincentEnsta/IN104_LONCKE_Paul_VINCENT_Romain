@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <time.h>
 #include "solve.h"
 #include "remplir_case.h"
 #include "grille_pleine.h"
