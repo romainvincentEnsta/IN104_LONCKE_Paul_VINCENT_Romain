@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS = -Wall -Werror
-LFLAGS = -I ~/IN104_Projet/sudoku/includes
+LFLAGS = -I~/IN104_Projet/sudoku/includes
 
 all: main.x clean
 
@@ -8,7 +8,7 @@ main.x : solve.o safe.o sudoku.o afficher_sudoku.o remplir_case.o grille_pleine.
 	$(CC) $(CFLAGS) -o $@ $^
 sudoku.o  : sudoku.c 
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
-tableau_plein.o : tableau_plein.c
+tableau_plein.o : tableau_nul.c
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
 grille_pleine.o : grille_pleine.c
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
@@ -18,7 +18,7 @@ safe.o : safe.c
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
 remplir_case.o : remplir_case.c
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
-solve.o : solve.c 
+solve.o : solve.c
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
 main.o : main.c 
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^

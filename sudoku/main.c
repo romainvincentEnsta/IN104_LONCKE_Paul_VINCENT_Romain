@@ -3,6 +3,7 @@
 #include "afficher_sudoku.h"
 #include "solve.h"
 #include "sudoku.h"
+#include <time.h>
 #include <stdbool.h>
 #include <stdlib.h>
 

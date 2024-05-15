@@ -13,7 +13,7 @@ int placer (int* grille, unsigned int chiffre, unsigned int joueur){
         printf("Wesh grosse erreur joueur\n");
         return 0;
     }
-     if(grille[chiffre]!=-1){// Si la case de la grille est déjà rempli.
+     if(grille[chiffre]!=-1){// Si la case de la grille est déjà remplie...
         printf("Wesh grosse erreur grille[chiffre]\n");
         return 0;
      }

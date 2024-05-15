@@ -9,6 +9,6 @@ int  grille_pleine(int** grille){     //La fonction parcourt la grille qui a pr√
             }
         }
     }
-    return 0;
+    return 1;
 }
 

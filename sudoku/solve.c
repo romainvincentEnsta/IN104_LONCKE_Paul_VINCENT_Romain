@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "safe.h"
 #include "solve.h"
 #include "remplir_case.h"
 #include "grille_pleine.h"
-#include <time.h>
+#include "safe.h"
 
 bool sudoku_solve(int** grille){
     srand(time(0));  //On l'utilise pour avoir un nombre aléatoire différent à chaque partie
@@ -24,10 +23,11 @@ bool sudoku_solve(int** grille){
         }
         for (int i=0;  i<=8 ; i++){                   //On teste quels nombres ont été tirés et on remplit le tableau mémoire
             if (safe(grille, ligne,colonne,i+1)){
-                mémoire[i]=0;
+                mémoire[i]=1;
+                printf("case safe\n");
             }
             else{
-                mémoire[i]=1;   
+                mémoire[i]=0;   
             }
         }
         valeur = remplir_case(valeur, mémoire);   //On assigne une valeur disponible dans le tableau mémoire
@@ -37,10 +37,9 @@ bool sudoku_solve(int** grille){
             return sudoku_solve(grille);
         }
         else {
-            free(mémoire);
-            return false;
+        free(mémoire);
+        return false;
         }
-        return true;
     }
     else {
         return true;

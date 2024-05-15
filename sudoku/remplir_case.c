@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "remplir_case.h"
-#include <time.h>
 #include "tableau_plein.h"
+#include <time.h>
 
 int remplir_case(int valeur, int* mémoire){
     srand(time(0));  //On veut des nombres aléatoires différents
@@ -15,6 +15,5 @@ int remplir_case(int valeur, int* mémoire){
             return valeur;
         }
     }
-    return 0;
 }
 
