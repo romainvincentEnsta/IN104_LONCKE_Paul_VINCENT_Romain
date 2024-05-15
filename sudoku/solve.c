@@ -8,41 +8,41 @@
 #include "safe.h"
 
 bool sudoku_solve(int** grille){
-    srand(time(0));  //On l'utilise pour avoir un nombre aléatoire différent à chaque partie
-    int ligne = 0;
-    int colonne = 0;
-    int valeur=0;
-    if (grille_pleine(grille)){                  //Tant que la grille n'est pas pleine on veut la remplir
-            while (grille[ligne][colonne]!=0){   //On tire un coéfficient au hasard
-                ligne=rand()%(9);
-                colonne=rand()%(9);
-        }
-        int* mémoire;                            //On garde en mémoire les valeurs déjà assignées dans ce tableau
-        mémoire=malloc(9*sizeof(int));
-        for(int j=0 ; j<9 ; j++){                //On l'initialise à zéro
-            mémoire[j]=0;
-        }
-        for (int i=0;  i<=8 ; i++){                   //On teste quels nombres ont été tirés et on remplit le tableau mémoire
-            if (safe(grille, ligne,colonne,i+1)){
-                mémoire[i]=1;
-                printf("case safe\n");
-            }
-            else{
-                mémoire[i]=0;   
+    int row, col;
+    bool isEmpty = false;
+
+    // Rechercher une cellule vide dans la grille
+    for (row = 0; row < 9; row++) {
+        for (col = 0; col < 9; col++) {
+            if (grille[row][col] == 0) {
+                isEmpty = true;
+                break;
             }
         }
-        valeur = remplir_case(valeur, mémoire);   //On assigne une valeur disponible dans le tableau mémoire
-        if (valeur!=0){
-            grille[ligne][colonne]=valeur;  //On néttoie
-            free(mémoire);
-            return sudoku_solve(grille);
-        }
-        else {
-        free(mémoire);
-        return false;
+        if (isEmpty) {
+            break;
         }
     }
-    else {
+
+    // Si aucune cellule vide n'est trouvée, la grille est résolue
+    if (!isEmpty) {
         return true;
     }
+
+    // Essayer les chiffres de 1 à 9
+    for (int num = 1; num <= 9; num++) {
+        if (safe(grille, row, col, num)) {
+            grille[row][col] = num;
+
+            // Recursion pour continuer avec cette solution partielle
+            if (sudoku_solve(grille)) {
+                return true;
+            }
+
+            // Si la tentative de placer le nombre n'aboutit pas, backtrack
+            grille[row][col] = 0;
+        }
+    }
+
+    return false; // Déclencher un backtracking
 }

@@ -13,7 +13,8 @@
 int main(){
     int** grille = creation_grille();  //On initialise une grille vide
     afficher_sudoku(grille);           //On l'affiche
-    sudoku_solve(grille);              //On la remplit
+    sudoku_solve(grille);  
+    afficher_sudoku(grille);            //On la remplit
 /*    while (!vérification){
         printf("Erreur");
         for (int i = 0;i<9;i++) {
