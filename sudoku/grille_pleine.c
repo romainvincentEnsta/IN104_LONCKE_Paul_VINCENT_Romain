@@ -5,7 +5,7 @@ int  grille_pleine(int** grille){     //La fonction parcourt la grille qui a pr�
     for (int i=0 ; i<9 ; i++){
         for(int j=0 ; j<9 ; j++){
             if (grille[i][j]==0){  //On teste si le coefficient vaut 0 et n'a donc pas encore été remplit
-                return 1;
+                return 0;
             }
         }
     }
