@@ -1,18 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-<<<<<<< HEAD
-#include "includes/solve.h"
-#include "includes/remplir_case.h"
-#include "includes/grille_pleine.h"
-#include "includes/safe.h"
-=======
 #include <time.h>
 #include "solve.h"
 #include "remplir_case.h"
 #include "grille_pleine.h"
 #include "safe.h"
->>>>>>> 8aac325c2baa12c535e1e6df8c3e6175d2da689c
 
 bool sudoku_solve(int** grille){
     int row, col;

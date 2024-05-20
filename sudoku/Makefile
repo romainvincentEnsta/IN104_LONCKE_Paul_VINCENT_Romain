@@ -4,13 +4,9 @@ LFLAGS = -I./includes
 
 all: main.x clean
 
-<<<<<<< HEAD
-main.x : safe.o sudoku.o afficher_sudoku.o remplir_case.o grille_pleine.o tableau_plein.o solve.o main.o
-=======
 main.x : solve.o safe.o sudoku.o afficher_sudoku.o remplir_case.o grille_pleine.o main.o tableau_nul.o
->>>>>>> 8aac325c2baa12c535e1e6df8c3e6175d2da689c
 	$(CC) $(CFLAGS) -o $@ $^
-sudoku.o  : sudoku.c 
+sudoku.o : sudoku.c 
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
 tableau_nul.o : tableau_nul.c
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
