@@ -11,6 +11,7 @@
 
 
 int main(){
+    // ici on définit toutes les variables importantes :  pacman, fantomes, la zone de jeu, le nombre de nourriture sur la zone de jeu
     srand(time(0));
     int compteur_food=0;
     ghost_t* all_ghosts=malloc(sizeof(ghost_t)*NB_GHOSTS);
@@ -56,7 +57,7 @@ int main(){
     zone_jeu[pac_man.coords.x][pac_man.coords.y]='P';
     int* pt_ou_pas_pt=malloc(sizeof(int)*NB_GHOSTS);
     for (int i=0 ; i<NB_GHOSTS ; i++){
-        pt_ou_pas_pt[i]=0;
+        pt_ou_pas_pt[i]=0;// il y avait des points la où était tout les fantômes
     }
     initialisation(all_ghosts, zone_jeu,compteur_food);
     for (int i=0 ; i<H ; i++){
@@ -66,9 +67,9 @@ int main(){
         printf("\n");
     }
     while((pac_man.lives>0) || (pac_man.food<compteur_food)){
-        pt_ou_pas_pt=move_ghost(zone_jeu,all_ghosts,pt_ou_pas_pt);
-        move_pacman(zone_jeu,&pac_man);
-        is_still_alive(&pac_man,zone_jeu);
+        pt_ou_pas_pt=move_ghost(zone_jeu,all_ghosts,pt_ou_pas_pt);//on bouge les fantômes
+        move_pacman(zone_jeu,&pac_man);// on bouge ensuite pacman 
+        is_still_alive(&pac_man,zone_jeu);// on vérifie si pacman est encore en vie
     }
     if (pac_man.lives>0){
         printf("Bravo tu as gagné !!!!!");
