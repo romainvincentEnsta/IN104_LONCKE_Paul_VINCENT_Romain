@@ -4,7 +4,7 @@ LFLAGS = -I~/IN104_Projet/sudoku/includes
 
 all: main.x clean
 
-main.x : solve.o safe.o sudoku.o afficher_sudoku.o remplir_case.o grille_pleine.o main.o tableau_plein.o
+main.x : safe.o sudoku.o afficher_sudoku.o remplir_case.o grille_pleine.o tableau_plein.o solve.o main.o
 	$(CC) $(CFLAGS) -o $@ $^
 sudoku.o  : sudoku.c 
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
