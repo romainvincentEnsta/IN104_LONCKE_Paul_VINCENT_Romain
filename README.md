@@ -16,9 +16,9 @@
         * [Création de la grille](#création-de-la-grille)
         * [Jouabilité](#jouabilitc3a9-1)
     * [Mise en oeuvre de PacMan]()
-        * [Création du labyrinthe]()
-        * [Déplacements du personnage]()
-        * [Jouabilité]
+        * [Création du labyrinthe](#initialisation)
+        * [Mouvements de PacMan et des fantômes](#mouvement-de-pac_man-et-des-fantômes)
+        * [Jouabilité](#jouabilité-2)
     * [Mise en oeuvre de Snake]()
 
 
@@ -75,7 +75,7 @@ Le fichier __morpion.c__ est celui permettant la prise en compte du choix des jo
 
 Enfin le fichier __afficher_grille.c__ permet d'afficher la grille.
 
-## Mise en oeuvre de pacman
+## Mise en oeuvre de PacMan
 ### Initialisation
 
 Au début du fichier __main.c__, on initialise la structure permettant de contenir pac_man définiedans le fichier
@@ -100,8 +100,7 @@ en gardant la nourriture au bon endroit
 Le fichier __is_still_alive.c__ contient la fonction __is_still_alive__, qui permet de vérifier s'il reste encore des vies
 au pacman, et de déterminer ainsi une condition d'arrêt du jeu
 
-### Condition d'arrêt et victoire ou défaite
+### Jouabilité
 
-Si le nombre d'arrêt de vies tombe à zéros, ou si pacman a mangé toute la nourriture, le joueur arrête de jouer car il a 
-gagné ou perdu selon le cas. Ceci est implémenté par la boucle while dans le fichier __main.c__ à la ligne 69
-
+Le code demandera donc à l'utilisateur d'entrer la direction dans laquelle il veut bouger le PacMan en mettant la lettre L,R,U ou D 
+pour Left,Right,Up ou Down. A chaque tour les fantômes se déplacent donc de manière aléatoire.
