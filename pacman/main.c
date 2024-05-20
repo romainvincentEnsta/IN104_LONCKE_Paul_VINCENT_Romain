@@ -67,8 +67,8 @@ int main(){
         printf("\n");
     }
     while((pac_man.lives>0) || (pac_man.food<compteur_food)){
-        pt_ou_pas_pt=move_ghost(zone_jeu,all_ghosts,pt_ou_pas_pt);//on bouge les fantômes
         move_pacman(zone_jeu,&pac_man);// on bouge ensuite pacman 
+        pt_ou_pas_pt=move_ghost(zone_jeu,all_ghosts,pt_ou_pas_pt,&pac_man);//on bouge les fantômes
         is_still_alive(&pac_man,zone_jeu);// on vérifie si pacman est encore en vie
     }
     if (pac_man.lives>0){
