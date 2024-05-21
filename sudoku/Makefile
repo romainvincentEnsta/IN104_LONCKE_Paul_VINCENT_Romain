@@ -6,7 +6,7 @@ all: main.x clean
 
 main.x : solve.o safe.o sudoku.o afficher_sudoku.o remplir_case.o grille_pleine.o main.o tableau_nul.o
 	$(CC) $(CFLAGS) -o $@ $^
-sudoku.o  : sudoku.c 
+sudoku.o : sudoku.c 
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^
 tableau_nul.o : tableau_nul.c
 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $^

@@ -16,9 +16,9 @@
         * [Création de la grille](#création-de-la-grille)
         * [Jouabilité](#jouabilitc3a9-1)
     * [Mise en oeuvre de PacMan]()
-        * [Création du labyrinthe]()
-        * [Déplacements du personnage]()
-        * [Jouabilité]
+        * [Création du labyrinthe](#initialisation)
+        * [Mouvements de PacMan et des fantômes](#mouvement-de-pac_man-et-des-fantômes)
+        * [Jouabilité](#jouabilité-2)
     * [Mise en oeuvre de Snake]()
 
 
@@ -74,3 +74,33 @@ Les fichiers __a_gagné.c__ et __est_plein.c__ permettent de vérifier si la par
 Le fichier __morpion.c__ est celui permettant la prise en compte du choix des joueurs. 
 
 Enfin le fichier __afficher_grille.c__ permet d'afficher la grille.
+
+## Mise en oeuvre de PacMan
+### Initialisation
+
+Au début du fichier __main.c__, on initialise la structure permettant de contenir pac_man définiedans le fichier
+ __structures.h__, et la zone de jeu qui est une matrice de caractère.
+
+Par la suite, on utilise la fonction __initialisation__ afin d'initialiser les fantômes sur la zone de jeu. 
+
+On définit ensuite le tableau __pt_ou_pas_pt__, qui donne l'information de la présence de nourriture avant que les fantômes arrivent
+sur la case où ils sont actuellement.
+
+### Mouvement de pac_man et des fantômes
+
+Le fichier __get_arrow.c__ contient les fonctions __get_arrow__, qui permet de récupérer la direction voulue par
+l'utilisateur pour le pacman, et __char_input__ qui est une version améliorée de scan_f
+
+Le fichier __move_pacman__ contient la fonction __move_pacman__ qui permet, une fois les déplacements connus de pacman,
+de le déplacer effectivement et de gérer la possible perte d'une vie.
+
+Le fichier __move_ghost.c__ contient la fonction __move_ghost__ qui permet de déplacer les fantômes aléatoirement,
+en gardant la nourriture au bon endroit
+
+Le fichier __is_still_alive.c__ contient la fonction __is_still_alive__, qui permet de vérifier s'il reste encore des vies
+au pacman, et de déterminer ainsi une condition d'arrêt du jeu
+
+### Jouabilité
+
+Le code demandera donc à l'utilisateur d'entrer la direction dans laquelle il veut bouger le PacMan en mettant la lettre L,R,U ou D 
+pour Left,Right,Up ou Down. A chaque tour les fantômes se déplacent donc de manière aléatoire.
