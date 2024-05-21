@@ -40,11 +40,12 @@ int* move_ghost(char zone_jeu[H][W], ghost_t* all_ghost, int* pt_ou_pas_pt,pac_m
             (all_ghost[i].coords).x=(all_ghost[i].coords).x+nx;
             (all_ghost[i].coords).y=(all_ghost[i].coords).y+ny;
         }
-        else if (zone_jeu[(all_ghost[i].coords).x+nx][(all_ghost[i].coords).y+ny]=='P'){
+        else if (zone_jeu[(all_ghost[i].coords).x+nx][(all_ghost[i].coords).y+ny]=='P'){// Si un fantôme arrive sur parcman
+            printf("C'est le cas où le fantôme vient sur P\n");
             pt_ou_pas_pt[i]=1;
             zone_jeu[(all_ghost[i].coords).x+nx][(all_ghost[i].coords).y+ny]='G';
-            pac_man->lives=pac_man->lives-1;
-            zone_jeu[1][1]='P';
+            pac_man->lives=pac_man->lives-1;// on fait perdre une vie à pacman
+            zone_jeu[1][1]='P';// on remet pacman aux coordonnées 1,1
             (pac_man->coords).x=1;
             (pac_man->coords).y=1;
             printf("Vous avez perdu une vie, il vous en reste : %d\n",pac_man->lives);
