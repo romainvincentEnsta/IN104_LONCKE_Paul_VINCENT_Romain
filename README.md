@@ -19,7 +19,9 @@
         * [Création du labyrinthe](#initialisation)
         * [Mouvements de PacMan et des fantômes](#mouvement-de-pac_man-et-des-fantômes)
         * [Jouabilité](#jouabilité-2)
-    * [Mise en oeuvre de Snake]()
+    * [Mise en oeuvre de Snake](#mise-en-oeuvre-de-snake)
+        * [Initialisation](#initialisation-et-initialisation-du-serpent)
+        * [Jouabilité](#jouabilité-3)
 
 
 # Présentation du projet
@@ -106,33 +108,23 @@ Le code demandera donc à l'utilisateur d'entrer la direction dans laquelle il v
 pour Left,Right,Up ou Down. A chaque tour les fantômes se déplacent donc de manière aléatoire.
 
 ## Mise en oeuvre de snake
-### Initialisation 
+### Initialisation et initialisation du serpent
 
 On commence par initialiser un tableau de charactères de dimensions __largeur__ et __hauteur__. On remplit ensuite le tableau par des espaces vides pour les cases et des __#__ pour les bords. 
 
-### Initialisation du serpent 
-
 Pour le représenter on utilise deux tableaux d'entiers __snakeX__ et __snakeY__ qui représentent les positions du serpent en abscisse et en ordonnées. On fait débuter le serpent au milieu de la grille. Il est de longueur initiale 3 par défaut.
 
-### Placement des fruits
+### Jouabilité
 
 Avec __placeFood()__ on place de manière aléatoire sur la grille de jeu un fruit qui sera représenté par le symbole __'X'__. Pour ce faire on utilise une boucle do-while.
-
-### Affichage 
 
 Une fois tout cela généré on utilise la fonction d'affichage __diplayBoard__ qui se charge de faire la correspondance entre les tableaux __snake__ et la grille afin d'y afficher le serpent. 
 Au préalable entre chaque tour on efface la grille précédente avec __system("clear")__ disponible dans la bibliothèque __unistd.h__.
 
-### Déplacement du serpent
-
 Avec __updateSnakePosition()__ on se charge d'actualiser la position du serpent entre chaque commande de l'utilisateur. On commence par effacer le corps du serpent au tour précédent puis on déplace son corps, enfin on actualise la position de sa tête en fonction de la commande voulue par l'utilisateur. On affiche de nouveau le serpent actualisé.
-
-### Fonctions de verifications
 
 Avec __checkCollision__ on vérifie que le serpent n'atteint pas le bord ou qu'il se cogne avec lui même sinon on passe le booléen game over à 1 et l'utilisateur perd. 
 
 Avec __checkFood__ on augmente la taille du serpent lorsque celui-ci mange un fruit, une fois fait on génère une nouvelle food.
-
-### Interaction avec l'utilisateur
 
 Dans __main__ on récupère la commande utilisateur à l'aide d'un scanf au sein d'une boucle while qui vérifie que l'on a pas atteint le game over.
