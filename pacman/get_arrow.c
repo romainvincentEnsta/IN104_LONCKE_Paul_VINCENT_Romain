@@ -11,25 +11,25 @@ void char_input(char* x){
 
 void get_arrow(pac_man_t* pac_man){
     char new;
-    printf("Dans quelle direction voulez vous bouger le pacman ? \n Ecrire : \n U pour Up \n D pour Down \n L pour Left \n R pour right\n");
+    printf("Dans quelle direction voulez vous bouger le pacman ? \n Ecrire : \n z pour Up \n s pour Down \n q pour Left \n d pour right\n");
     char_input(&new);
-    while ((new!='L') && (new!='R') && (new!='U') && (new!='D')){
-        printf("La valeur donnée n'est pas valide. Veuillez bien la remplir avec cette configuartion\n Ecrire : \n U pour Up \n D pour Down \n L pour Left \n R pour right\n");
+    while ((new!='q') && (new!='d') && (new!='z') && (new!='s')){
+        printf("La valeur donnée n'est pas valide. Veuillez bien la remplir avec cette configuartion\n Ecrire : \n z pour Up \n s pour Down \n q pour Left \n d pour right\n");
         char_input(&new);
     }
-    if (new=='L'){
+    if (new=='q'){
         pac_man->nx=0;
         pac_man->ny=-1;
     }
-    if (new=='R'){
+    if (new=='d'){
         pac_man->nx=0;
         pac_man->ny=1;
     }
-    if (new=='U'){
+    if (new=='z'){
         pac_man->nx=-1;
         pac_man->ny=0;
     }
-    if (new=='D'){
+    if (new=='s'){
         pac_man->nx=1;
         pac_man->ny=0;
     }
