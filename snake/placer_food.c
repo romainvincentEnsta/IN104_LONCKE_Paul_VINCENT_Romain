@@ -1,20 +1,13 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "snake_game.h"
 
-#define largeur 20
-#define hauteur 20
-
-char** placer_food(char** grille) {
+void placer_food(char** grille, int *foodX, int* foodY) {
     srand(time(0));
-    int foodX, foodY;
-
     do {
-        foodX = rand() % largeur;
-        foodY = rand() % hauteur; 
-    } while (grille[foodX][foodY] == 'O');
+        *foodX = rand() % largeur;
+        *foodY = rand() % hauteur; 
+    } while (grille[*foodY][*foodX] == 'O');
 
-    grille[foodX][foodY] = 'X';
-    
-    return grille;
+    grille[*foodY][*foodX] = 'X';
 }
